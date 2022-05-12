@@ -1,14 +1,14 @@
-## 使用
+## 使用方式
 
 请按照步骤来，顺序很重要
 
-0. 下载 grasscutter.jar
+### 0. 下载 grasscutter.jar
 
 可到 https://github.com/Grasscutters/Grasscutter/releases 下载，或者自行编译。
 
 下载后，移动到 `GrasscutterDocker/grasscutter.jar` 这里。
 
-1. 更改配置
+### 1. 更改配置
 
 `config.json`
 
@@ -23,13 +23,13 @@
 }
 ```
 
-2. 构建 `GrasscutterDocker/Dockerfile`
+### 2. 构建 `GrasscutterDocker/Dockerfile`
 
 ```sh
 docker build --pull --rm -f "GrasscutterDocker/Dockerfile" -t grasscutter:latest "GrasscutterDocker"
 ```
 
-3. 手动启动一次 `GrasscutterDocker/docker-compose.yaml`
+### 3. 手动启动一次 `GrasscutterDocker/docker-compose.yaml`
 
 ```yaml
 services:
@@ -62,7 +62,7 @@ java -jar grasscutter.jar
 docker compose -f "GrasscutterDocker/docker-compose.yaml" down
 ```
 
-4. 更改 `GrasscutterDocker/docker-compose.yaml`
+### 4. 更改 `GrasscutterDocker/docker-compose.yaml`
 
 ```yaml
 services:
@@ -78,7 +78,7 @@ services:
 docker compose -f "GrasscutterDocker/docker-compose.yaml" up -d --build
 ```
 
-5. 设置代理
+### 5. 设置代理
 
 启动代理
 
