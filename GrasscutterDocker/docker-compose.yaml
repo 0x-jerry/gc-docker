@@ -1,0 +1,42 @@
+version: "3"
+
+services:
+  app:
+    image: grasscutter
+    tty: true
+    stdin_open: true
+    volumes:
+      - ../Grasscutter_Resources/Resources:/root/resources
+      - ../Grasscutter/data:/root/data
+      - ../Grasscutter/keys:/root/keys
+      - ../Grasscutter/keystore.p12:/root/keystore.p12
+      - ./grasscutter.jar:/root/grasscutter.jar
+      - ./config.json:/root/config.json
+    ports:
+      - "22102:22102/udp"
+      - "443:443"
+    links:
+      - mongodb
+    entrypoint: java -jar grasscutter.jar
+    # entrypoint: tail -f /dev/null
+    depends_on:
+      - mongodb
+    
+  mongodb:
+    image: mongo
+    volumes:
+      - ./db:/data/db
+    ports:
+      - "27017:27017"
+
+  mongo-express:
+    image: mongo-express
+    restart: always
+    links:
+      - mongodb
+    depends_on:
+      - mongodb
+    ports:
+      - 9091:8081
+    environment:
+      ME_CONFIG_MONGODB_URL: mongodb://mongodb:27017/
