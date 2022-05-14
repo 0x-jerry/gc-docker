@@ -2,18 +2,17 @@ version: "3"
 
 services:
   app:
-    image: grasscutter
+    image: gc
     tty: true
     stdin_open: true
     volumes:
-      - ../Grasscutter_Resources/Resources:/root/resources
-      - ../Grasscutter/data:/root/data
-      - ../Grasscutter/keys:/root/keys
-      - ../Grasscutter/keystore.p12:/root/keystore.p12
+      - ../Grasscutter_Resources/Resources:/app/resources
+      - ../Grasscutter/data:/app/data
+      - ../Grasscutter/keys:/app/keys
+      - ../Grasscutter/keystore.p12:/app/keystore.p12
 
-      - ./plugins:/root/plugins
-      - ./grasscutter.jar:/root/grasscutter.jar
-      - ./config.json:/root/config.json
+      - ./plugins:/app/plugins
+      - ./config.json:/app/config.json
     ports:
       - "22102:22102/udp"
       - "443:443"

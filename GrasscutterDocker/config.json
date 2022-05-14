@@ -8,7 +8,6 @@
   "KEY_FOLDER": "./keys/",
   "SCRIPTS_FOLDER": "./resources/Scripts/",
   "PLUGINS_FOLDER": "./plugins/",
-  "LANGUAGE_FOLDER": "./languages/",
   "DebugMode": "NONE",
   "RunMode": "HYBRID",
   "GameServer": {
