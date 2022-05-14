@@ -22,8 +22,8 @@
     "fallback": "en_US"
   },
   "account": {
-    "autoCreate": false,
-    "defaultPermissions": []
+    "autoCreate": true,
+    "defaultPermissions": ["*"]
   },
   "server": {
     "debugLevel": "NONE",
