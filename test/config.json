@@ -30,7 +30,7 @@
     "runMode": "HYBRID",
     "dispatch": {
       "bindAddress": "0.0.0.0",
-      "accessAddress": "127.0.0.1",
+      "accessAddress": "192.168.123.142",
       "bindPort": 443,
       "accessPort": 0,
       "encryption": {
@@ -52,7 +52,7 @@
     },
     "game": {
       "bindAddress": "0.0.0.0",
-      "accessAddress": "127.0.0.1",
+      "accessAddress": "192.168.123.142",
       "bindPort": 22102,
       "accessPort": 0,
       "gameOptions": {
