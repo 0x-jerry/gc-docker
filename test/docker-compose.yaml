@@ -8,6 +8,7 @@ services:
     volumes:
       - ./plugins:/app/plugins
       - ./config.json:/app/config.json
+      - ./data/gacha_mappings.js:/app/data/gacha_mappings.js
     ports:
       - "22102:22102/udp"
       - "443:443"
