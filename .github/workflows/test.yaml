@@ -3,7 +3,7 @@ name: build
 on:
   push:
     branches:
-      - 'test'
+      - 'main'
 
 jobs:
   docker:
@@ -25,4 +25,5 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
+          file: Dockerfile.test
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/gc:test
