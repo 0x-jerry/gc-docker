@@ -25,4 +25,4 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/gc:${{env.GITHUB_REF_NAME}}
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/gc:${{ github.ref_name }}
