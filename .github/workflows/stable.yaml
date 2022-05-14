@@ -2,8 +2,8 @@ name: build
 
 on:
   push:
-    branches:
-      - 'main'
+    tags:
+      - "*"
 
 jobs:
   docker:
@@ -25,4 +25,4 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/gc:test
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/gc:${{env.GITHUB_REF_NAME}}
