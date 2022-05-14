@@ -2,15 +2,10 @@ version: "3"
 
 services:
   app:
-    image: gc
+    image: 0xjerry/gc:test
     tty: true
     stdin_open: true
     volumes:
-      - ../Grasscutter_Resources/Resources:/app/resources
-      - ../Grasscutter/data:/app/data
-      - ../Grasscutter/keys:/app/keys
-      - ../Grasscutter/keystore.p12:/app/keystore.p12
-
       - ./plugins:/app/plugins
       - ./config.json:/app/config.json
     ports:
