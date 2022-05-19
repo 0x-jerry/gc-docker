@@ -23,12 +23,14 @@
   },
   "account": {
     "autoCreate": true,
-    "defaultPermissions": ["*"]
+    "defaultPermissions": [
+      "*"
+    ]
   },
   "server": {
     "debugLevel": "NONE",
     "runMode": "HYBRID",
-    "dispatch": {
+    "http": {
       "bindAddress": "0.0.0.0",
       "accessAddress": "192.168.123.142",
       "bindPort": 443,
@@ -47,8 +49,10 @@
           ]
         }
       },
-      "regions": [],
-      "defaultName": "Grasscutter"
+      "files": {
+        "indexFile": "./index.html",
+        "errorFile": "./404.html"
+      }
     },
     "game": {
       "bindAddress": "0.0.0.0",
@@ -110,7 +114,11 @@
         "nickName": "Server",
         "signature": "Welcome to Grasscutter!"
       }
+    },
+    "dispatch": {
+      "regions": [],
+      "defaultName": "Grasscutter"
     }
   },
-  "version": 2
+  "version": 3
 }
