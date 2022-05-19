@@ -27,3 +27,5 @@ jobs:
           push: true
           file: Dockerfile.test
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/gc:test
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
